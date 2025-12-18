@@ -42,8 +42,8 @@ python -m uvicorn api:app --reload
 Swagger docs: http://127.0.0.1:8000/docs
 
 4. Test /scan endpoint
+   POST /scan
 ```bash
-POST /scan
 {
   "title": "Remote Data Entry",
   "company_name": "",
@@ -79,5 +79,6 @@ Author
 
 Adetomiwa Adewale
 GitHub: https://github.com/adetomiwa08
+
 
 
