@@ -71,12 +71,13 @@ JobGuard/
 
 Hackathon Compliance
 
-Unique x402 resource: /scan API
-Registered and callable via webhook
-Structured input/output, pay-per-use ready
+- Unique x402 resource: /scan API
+- Registered and callable via webhook
+- Structured input/output, pay-per-use ready
 
 Author
 
 Adetomiwa Adewale
 GitHub: https://github.com/adetomiwa08
+
 
