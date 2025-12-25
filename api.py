@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Request, HTTPException
+from fastapi.responses import JSONResponse   # ✅ ADD
 from src.analyze import analyze_job
 from x402 import x402_response  # returns JSON with 402 Payment Required
 
@@ -7,6 +8,18 @@ app = FastAPI(
     description="Rule-based job scam detection engine",
     version="1.0.0"
 )
+
+# ==============================
+# ✅ ADD THIS BLOCK (x402 verification)
+# ==============================
+@app.get("/.well-known/x402-verification.json")
+async def x402_verification():
+    return JSONResponse(
+        content={ "x402": "384dd60cda78" }
+    )
+# ==============================
+# END ADDITION
+# ==============================
 
 @app.api_route("/scan", methods=["POST", "GET"])
 async def scan_job(request: Request):
